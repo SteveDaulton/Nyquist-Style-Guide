@@ -62,7 +62,7 @@ Unless more specific rules state otherwise, use two spaces:
 
 ## Comments
 
-### Dollar , semicolon or hash + pipe
+### Dollar , semicolon, or hash + pipe
 
 Audacity uses the "$" (dollar) character in place of semicolons for _translatable_ headers in plug-ins that are shipped with Audacity. This should _only_ be used in plug-ins that are shipped with Audacity as these are the only plug-ins that Audacity has translations for. All other plug-ins and scripts should _always_ use one semicolon. Translatable strings in plug-in headers must be wrapped in the UNDERSCORE function:
 
