@@ -19,6 +19,7 @@ These are the most common rules for indenting Lisp programs:
 
 Do NOT use tab characters in LISP code. Tabs are interpreted differently by different text editors and are likely to make your code look like a mess for anyone using a different text editor.
 
+
 ### Top-level functions
 
 All top-level function definitions start in column 1. This is not negotiable. 
@@ -61,7 +62,7 @@ Unless more specific rules state otherwise, use two spaces:
 
 ## Comments
 
-## Dollar , semicolon or hash + pipe
+### Dollar , semicolon or hash + pipe
 
 Audacity uses the "$" (dollar) character in place of semicolons for _translatable_ headers in plug-ins that are shipped with Audacity. This should _only_ be used in plug-ins that are shipped with Audacity as these are the only plug-ins that Audacity has translations for. All other plug-ins and scripts should _always_ use one semicolon. Translatable strings in plug-in headers must be wrapped in the UNDERSCORE function:
 
@@ -105,7 +106,7 @@ The **#|** and **|#** symbols may be used to temporarily remove a block of code,
       ; (setq wave (extract-abs wl (+ dur wl)(cue wave)))
       (mult wave amp (/ (peak wave (truncate (* 4 wlength)))))))
 
-**Not recommended**
+**Bad**
 
     #|
     Released under terms of the GNU General Public License version 2:
@@ -145,6 +146,7 @@ or
       ;;; If 'string' is not a valid LISP expression, the behaviour is undefined.
       (eval (read (make-string-input-stream string))))
 
+
 ### Comment contents
 
 Be brief and to the point. Use the imperative form when documenting functions. Avoid redundant expressions such as *This function...*.
@@ -161,11 +163,12 @@ Be brief and to the point. Use the imperative form when documenting functions. A
 
 **Good**
 
-    ;;; Returns the LFO waveform for panning.
+    ;;; Return the LFO waveform for panning.
     (defun get-lfo (offset sign range rate *waveform* phase)
       (let ((sig (lfo rate 1.0 *waveform* phase)))
         (setf sig (mult sign 0.5 sig))
         (mult range sig)))
+
 
 ## Indenting special forms
 
