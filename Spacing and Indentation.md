@@ -194,6 +194,28 @@ _WHEN_ takes an arbitrary number of arguments, the first of which is the _test_.
 
 ### "LET" special form
 
+_LET_ is a local block construct that contains symbols with optional initializations, and a block of code expressions to evaluate.
+
+The list of local  variables directly follows the LET statement.  The code block begins on the next line, indented by two spaces
+
+    (let (x y z)
+      (print x) (print y) (print z))
+
+If the list of local variables is long, it may be split across multiple lines. The list of variables should line up as shown below, but it is acceptable to include multiple short name variables on the final line. The code block is indented 2 spaces relative to the LET line.
+
+    (let (my-first-variable
+          another-local-variable
+          x y z)
+      (setf my-first-variable 12)
+      (setf  another-local-variable 42)
+      (print x) (print y) (print z))
+            
+Local variables with bindings should normally have one variable + value pair per line:
+
+    (let ((foo 12)
+          (bar 42))
+      (print (+ foo bar)))
+
 ### "LET*" special form
 
 ### "DO" special form
