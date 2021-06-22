@@ -218,6 +218,14 @@ Local variables with bindings should normally have one variable + value pair per
 
 ### "LET*" special form
 
+_LET*_ is much like _LET_ except that bindings are evaluated sequentially. As with _LET_, variable + value pairs should line up vertically, but note that this pushes the start of lines between the normal 2 space columns. The code block is still indented 2 spaces relative to the _LET*_ line.
+
+    (let* ((foo 40)
+           (bar (+ foo 2)))
+      (print (+ foo bar)))  ;prints 42
+
+Observe that sequential evaluation is _required_ in the above example; _foo_ MUST be evaluated before _bar_.
+
 ### "DO" special form
 
 ### "DO*" special form
