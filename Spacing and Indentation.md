@@ -309,3 +309,42 @@ The above might be better written as:
 
 
 ### "CASE" special form
+
+_CASE_ is a special form that evaluates one expression, which is then compared with a series of _values_. When a match is found, the code block _"action"_ associated with that value is evaluated and returned as the result.
+
+The dominant style in Nyquist if for the first expression to be on the first line, and the _value + action_ pairs to be indented two spaces below:
+
+    (case order
+      (1 (lp sig low-hz))
+      (2 (lowpass2 sig low-hz))
+      (4 (lowpass4 sig low-hz))
+      (6 (lowpass6 sig low-hz))
+      (8 (lowpass8 sig low-hz))
+      (t (error "Filter order invalid" order)))
+
+However, opinions appear to be divided over the correct way to format the _CASE_ special form, and other styles as shown below may be encountered. The dominant style (above) is encouraged, but whichever style you choose, use it consistently. Do NOT mix styles within a code project.
+
+    (case val (1 (print "one"))
+              ((2 3) (print "two or three"))
+              (t (print "Not 1, 2 or 3")))
+
+
+    (case val (1     (print "one"))
+              ((2 3) (print "two or three"))
+              (t     (print "Not 1, 2 or 3")))
+
+
+    (case val
+      (1 (print "one"))
+      ((2 3) (print "two or three"))
+      (t (print "Not 1, 2 or 3")))
+
+
+    (case val
+      (1      (print "one"))
+      ((2 3)  (print "two or three"))
+      (t      (print "Not 1, 2 or 3")))
+
+
+
+
