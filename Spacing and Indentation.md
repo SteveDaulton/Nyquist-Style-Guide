@@ -253,7 +253,7 @@ _LET*_ is much like _LET_ except that the local variable bindings are evaluated 
          ((= 3 foo) bar)
       (format t "foo=~a  bar=~a~%" foo bar))
 
-The above prints:
+The above prints to the debug window:
 
     foo=1  bar=2
     foo=2  bar=4
@@ -262,5 +262,50 @@ and returns "6".
 
 
 ### "COND" special form
+
+_COND_ evaluates a series of predicate / expression pairs in sequential order. When one of the expressions evaluates to non-NIL, the associated expression or code block is evaluated and the result is returned. If all of the test expressions evaluate to NIL, then NIL is returned.
+
+If the lines are sufficiently short, they may simply be lined up as shown below:
+
+**Good**
+
+    (setf val 2)
+    (cond ((not (boundp 'val)) (print "Unknown val"))
+          ((not (numberp val)) (print "val is not a number"))
+          ((= val 1) (print "val = 1"))
+          ((= val 2) (print "val = 2"))
+          ((= val 3) (print "val = 3"))
+          (t (print "val is not 1, 2 or 3")))
+
+In more complex cases with larger code blocks, you may be tempted to start the code block on a new line, indented by two spaces, but consider rewriting the code so that this is not necessary.
+
+**Not nice**
+
+    (let* ((foo (foo-func))
+           (bar (get-bar foo)))
+      (cond
+        ((and foo (> bar 0))
+          (let ((val (/ foo bar)))
+            ;more stuff with some longer lines so
+            ;we are trying to conserve horizontal space.
+            val))
+        ((and bar (> foo 0))
+          (let ((val (/ foo bar)))
+            ;more stuff
+            val))
+        (t nil)))
+
+The above might be better written as:
+
+**Better**
+
+    (let* ((foo (foo-func))
+           (bar (get-bar foo)))
+      (cond ((and foo (> bar 0))
+             (my-foo-function foo bar))
+            ((and bar (> foo 0))
+             (my-foo-function bar foo))
+            (t nil)))
+
 
 ### "CASE" special form
