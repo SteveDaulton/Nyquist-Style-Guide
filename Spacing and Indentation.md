@@ -228,7 +228,38 @@ Observe that sequential evaluation is _required_ in the above example; _foo_ MUS
 
 ### "DO" special form
 
+_DO_ is a special form block for looping _while_ a test condition is true.
+Ensure that each local variable binding lines up with the first local variable, and that the test condition clause is indented to line up with the first local variable clause.
+The code block should be indented two spaces.
+
+    (do ((foo 0 (1+ foo))
+         (bar 2 (+ 2 bar)))
+        ((= foo 2) bar)
+      (format t "foo=~a  bar=~a~%" foo bar))
+
+The above code will print to the debug window:
+
+    foo=0  bar=2
+    foo=1  bar=4
+
+and return the value of bar, which then has the value "6".
+
 ### "DO*" special form
+
+_LET*_ is much like _LET_ except that the local variable bindings are evaluated sequentially. As with _DO*_, this means that after the first line, and subsequent local variable bindings should be indented one extra space so that they line up, and the test condition clause must also be indented one extra space.
+
+    (do* ((foo 1 (1+ foo))
+          (bar (* 2 foo) (* 2 foo)))
+         ((= 3 foo) bar)
+      (format t "foo=~a  bar=~a~%" foo bar))
+
+The above prints:
+
+    foo=1  bar=2
+    foo=2  bar=4
+
+and returns "6".
+
 
 ### "COND" special form
 
