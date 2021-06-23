@@ -7,7 +7,7 @@ This document applies to Nyquist code written using LISP syntax only. For exampl
 2. Readability, 
 3. Ease of writing.
 
-_Indentation_ is literally the type and amount of space at the beginning of each line of code. More generally it is a set of rules for laying out the code text of programs and scripts, including when to use new lines, choice of whitespace characters, choice of comment characters, and so on. It is very important to indent Lisp programs correctly. Counting parentheses is NOT a good way to read code, and should not be necessary if the code is indented correctly.
+_Indentation_ is literally the type and amount of space at the beginning of each line of code. More generally it is a set of rules for laying out the code text of programs and scripts, including when to use new lines, choice of white-space characters, choice of comment characters, and so on. It is very important to indent Lisp programs correctly. Counting parentheses is NOT a good way to read code, and should not be necessary if the code is indented correctly.
 
 With few exceptions, indentation rules are _not_ a matter of personal opinion, but a matter of _shared culture_. The rules for properly indenting Lisp programs have evolved over many years in the Lisp community and are extremely important for maintainability. Programs are frequently maintained by people other than the original developer, so they should be written in a way that can be easily read by other LISP programmers.
 
@@ -187,7 +187,7 @@ The **IF** special form has exactly three arguments; The _test_ expression, the 
 
 ### "WHEN" special form
 
-_WHEN_ takes an arbitrary number of arguments, the first of which is the _test_. The test is written on the first line, and all the otherarguments on separate linesbelow, indented by two spaces:
+_WHEN_ takes an arbitrary number of arguments, the first of which is the _test_. The test is written on the first line, and all the other arguments on separate lines below, indented by two spaces:
 
     (when (> x 0)
       (setf val 0)
