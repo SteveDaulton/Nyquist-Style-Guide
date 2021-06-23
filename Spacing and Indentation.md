@@ -101,7 +101,7 @@ The **#|** and **|#** symbols may be used to temporarily remove a block of code,
 
 **Better**
 
-Most LISP code edditor will highlight these commented lines so that it is obvious that they are commented out.
+Most LISP code editors will highlight these commented lines so that it is obvious that they are commented out.
 
       (setq wave (osc (hz-to-step f) dur (maketable wave) ph))
       ; (setq wave (lowpass2 wave (/ *sound-srate* 4) 0.56))
