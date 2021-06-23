@@ -193,6 +193,61 @@ _WHEN_ takes an arbitrary number of arguments, the first of which is the _test_.
       (setf val 0)
       (setf y (* x 2)))
 
+Short _WHEN_ statements may be written on a single line, with a single space between the test expression and the expression to be evaluated:
+
+    (when is-true (print "It is true"))
+
+
+### "UNLESS" special form
+
+_UNLESS_ can be though of as the opposite of _WHEN_. The indentation follow the same pattern as _WHEN_.
+
+    (unless (> x 0)
+      (setf val 0)
+      (setf y (* x 2)))
+
+and the single line version:
+
+    (when is-false (print "It is false"))
+
+
+### "IF", "WHEN" and "UNLESS": Which to use?
+
+In cases where there are two alternatives, the answer is obviously to use _IF_, as this is the only one of the three that provides an _"ELSE"_ clause.
+
+When there is only one choice, use _"WHEN"_ for cases where it is more logical to test for a _True_ value, and use _"UNLESS"_ when it is more logical to test for a _False_ value.
+
+**Bad**
+
+    (if is-true
+        (print "It is true"))
+
+**Good**
+
+    (if is-true
+        (print "It is true")
+        (print "It is false"))
+
+**Good**
+
+    (when is-true
+      (print "It is true"))
+
+**Bad**
+
+    (when (not is-true)
+      (print "It is not true"))
+
+**Bad**
+
+    (unless (not is-false)
+      (print "It is not false))
+
+**Good**
+
+    (unless is-false
+      (print "It is false"))
+
 
 ### "LET" special form
 
