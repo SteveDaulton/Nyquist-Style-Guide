@@ -256,7 +256,9 @@ _LET_ is a local block construct that contains symbols with optional initializat
 The list of local  variables directly follows the LET statement.  The code block begins on the next line, indented by two spaces
 
     (let (x y z)
-      (print x) (print y) (print z))
+      (print x)
+      (print y)
+      (print z))
 
 If the list of local variables is long, it may be split across multiple lines. The list of variables should line up as shown below, but it is acceptable to include multiple short name variables on the final line. The code block is indented 2 spaces relative to the LET line.
 
