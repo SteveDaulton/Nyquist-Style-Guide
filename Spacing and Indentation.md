@@ -208,14 +208,14 @@ _UNLESS_ can be though of as the opposite of _WHEN_. The indentation follow the 
 
 and the single line version:
 
-    (when is-false (print "It is false"))
+    (unless is-true (print "It is false"))
 
 
 ### "IF", "WHEN" and "UNLESS": Which to use?
 
 In cases where there are two alternatives, the answer is obviously to use _IF_, as this is the only one of the three that provides an _"ELSE"_ clause.
 
-When there is only one choice, use _"WHEN"_ for cases where it is more logical to test for a _True_ value, and use _"UNLESS"_ when it is more logical to test for a _False_ value.
+When there is only one choice, use _"WHEN"_ for cases where it is more logical to test for a _True_ value, and use _"UNLESS"_ when it is more logical to test for a _Not True_ value.
 
 **Bad**
 
@@ -246,7 +246,7 @@ When there is only one choice, use _"WHEN"_ for cases where it is more logical t
 **Good**
 
     (unless is-false
-      (print "It is false"))
+      (print "It is true"))
 
 
 ### "LET" special form
