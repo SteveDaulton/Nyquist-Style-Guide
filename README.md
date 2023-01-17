@@ -1,5 +1,5 @@
-# AudioNyq Coding Standards
-Unofficial coding standards for coding Nyquist plug-ins for Audacity using LISP syntax, as used by [AudioNyq.com](https://audionyq.com/)
+# AudioNyq Style Guide
+Unofficial style guide for (Audacity) Nyquist plug-ins, using LISP syntax, as used by [AudioNyq.com](https://audionyq.com/)
 
 ## Contents
 
