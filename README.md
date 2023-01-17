@@ -1,5 +1,5 @@
-# AudioNyq Style Guide
-Unofficial style guide for (Audacity) Nyquist plug-ins, using LISP syntax, as used by [AudioNyq.com](https://audionyq.com/)
+# Nyquist Style Guide
+Unofficial style guide for Nyquist, and specifically Nyquist plug-ins for Audacity, using LISP syntax. As used by [AudioNyq.com](https://audionyq.com/)
 
 ## Contents
 
