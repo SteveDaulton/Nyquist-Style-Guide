@@ -80,7 +80,7 @@ Audacity uses the "$" (dollar) character in place of semicolons for _translatabl
     ;type process
     ;name "My Filter"
 
-The **#|** and **|#** symbols may be used to temporarily remove a block of code, but is not recommended for production code:
+The **#&#124;** and **&#124;#** symbols may be used to temporarily remove a block of code, but is not recommended for production code:
 
 **Good**
 
