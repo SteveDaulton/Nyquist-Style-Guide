@@ -1,5 +1,6 @@
 # Indentation
 
+
 ## Introduction
 
 This document applies to Nyquist code written using LISP syntax only. For examples of SAL syntax, please refer to the official CMU Nyquist documentation. The information contained here aims to follow best practices for other dialects of LISP, and compatibility with official CMU Nyquist documentation. There may be minor deviations from other published standards at the discretion of the author of this guide for the purposes of: 
@@ -13,7 +14,9 @@ With few exceptions, indentation rules are _not_ a matter of personal opinion, b
 
 These are the most common rules for indenting Lisp programs:
 
+
 ## General rules
+
 
 ### Use spaces
 
@@ -23,6 +26,7 @@ Do NOT use tab characters in LISP code. Tabs are interpreted differently by diff
 ### Top-level functions
 
 All top-level function definitions start in column 1. This is not negotiable. 
+
 
 ### Closing parentheses
 
@@ -36,13 +40,13 @@ Closing parentheses are never preceded by newlines.
   )
 )
 ```
-
 **Good**
 ```lisp
 (defun f (x)
   (when (< x 3)
     (* x 2)))
 ```
+
 
 ### Amount of indentation
 
@@ -60,6 +64,7 @@ Unless more specific rules state otherwise, use two spaces:
   (when (< x 3)
     (* x 2)))
 ```
+
 
 ## Comments
 
@@ -120,6 +125,7 @@ https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference
 |#
 ```
 
+
 ### Number of semicolons
 
 When a comment refers to the preceding code on the same line, use a single semicolon:
@@ -150,6 +156,7 @@ or
   (eval (read (make-string-input-stream string))))
 ```
 
+
 ### Comment contents
 
 Be brief and to the point. Use the imperative form when documenting functions. Avoid redundant expressions such as *This function...*.
@@ -162,7 +169,6 @@ Be brief and to the point. Use the imperative form when documenting functions. A
     (setf sig (mult sign 0.5 sig))
     (mult range sig)))
 ```
-
 **Good**
 ```lisp
 ;;; Return the LFO waveform for panning.
@@ -172,9 +178,11 @@ Be brief and to the point. Use the imperative form when documenting functions. A
     (mult range sig)))
 ```
 
+
 ## Indenting special forms
 
 Special forms each have their own indentation rules. These are some common examples:
+
 
 ### "IF" special form
 
@@ -184,6 +192,7 @@ The **IF** special form has exactly three arguments; The _test_ expression, the 
     (process-a x)
     (process-b x))
 ```
+
 
 ### "WHEN" special form
 
@@ -198,6 +207,7 @@ Short _WHEN_ statements may be written on a single line, with a single space bet
 (when is-true (print "It is true"))
 ```
 
+
 ### "UNLESS" special form
 
 _UNLESS_ can be though of as the opposite of _WHEN_. The indentation follow the same pattern as _WHEN_.
@@ -210,6 +220,7 @@ and the single line version:
 ```lisp
 (unless is-true (print "It is false"))
 ```
+
 
 ### "IF", "WHEN" and "UNLESS": Which to use?
 
@@ -249,6 +260,7 @@ When there is only one choice, use _"WHEN"_ for cases where it is more logical t
   (print "It is true"))
 ```
 
+
 ### "LET" special form
 
 _LET_ is a local block construct that contains symbols with optional initializations, and a block of code expressions to evaluate.
@@ -275,6 +287,8 @@ Local variables with bindings should normally have one variable + value pair per
       (bar 42))
   (print (+ foo bar)))
 ```
+
+
 ### "LET*" special form
 
 _LET*_ is much like _LET_ except that bindings are evaluated sequentially. As with _LET_, variable + value pairs should line up vertically, but note that this pushes the start of lines between the normal 2 space columns. The code block is still indented 2 spaces relative to the _LET*_ line.
@@ -284,6 +298,7 @@ _LET*_ is much like _LET_ except that bindings are evaluated sequentially. As wi
   (print (+ foo bar)))  ;prints 42
 ```
 Observe that sequential evaluation is _required_ in the above example; _foo_ MUST be evaluated before _bar_.
+
 
 ### "DO" special form
 
@@ -302,6 +317,7 @@ foo=0  bar=2
 foo=1  bar=4
 ```
 and return the value of bar, which then has the value "6".
+
 
 ### "DO*" special form
 
@@ -366,6 +382,7 @@ The above might be better written as:
          (my-foo-function bar foo))
         (t nil)))
 ```
+
 
 ### "CASE" special form
 
