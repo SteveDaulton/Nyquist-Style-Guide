@@ -133,10 +133,10 @@ all identical. However, there are at least a couple of _gotchas_.
 This is now fixed in Audacity.
 2. Case is preserved in double-quoted strings, but not in single quoted symbols.
 ```
-# a double-quoted string
+;; a double-quoted string
 "This_is_Case_Sensitive"
 
-# a quoted symbol, converted internally to 'NOT_CASE_SENSITIVE
+;; a quoted symbol, converted internally to 'NOT_CASE_SENSITIVE
 'Not_CaSe_sEnSiTiVe
 ```
 3. Watch out for file names as strings. Depending on the local file system, paths and file names
