@@ -128,10 +128,10 @@ processing in Nyquist) is called a _Nyquist Macro_.
 Nyquist is case-insensitive (symbols are converted to upper-case internally, so for example `list`, `List` and `LIST` are
 all identical. However, there are at least a couple of _gotchas_.
 
-1. In 2015 I observed that keywords in SAL syntax were case-sensitive.
+* In 2015 I observed that keywords in SAL syntax were case-sensitive.
 [Roger Dannenberg](https://www.cs.cmu.edu/~rbd/) confirmed that this was a bug rather than a feature.
 This is now fixed in Audacity.
-2. Case is preserved in double-quoted strings, but not in single quoted symbols.
+* Case is preserved in double-quoted strings, but not in single quoted symbols.
 
 ```
 ;; a double-quoted string
@@ -141,7 +141,7 @@ This is now fixed in Audacity.
 'Not_CaSe_sEnSiTiVe
 ```
 
-3. Watch out for file names as strings. Depending on the local file system, paths and file names
+* Watch out for file names as strings. Depending on the local file system, paths and file names
 may or may-not be case-sensitive.
 
 ### Case convention
