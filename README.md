@@ -8,3 +8,4 @@ Unofficial style guide for Nyquist, and specifically Nyquist plug-ins for Audaci
 * [General rules](Spacing and Indentation#general-rules)
 * [Comments](Spacing and Indentation#comments)
 * [Indenting special forms](Spacing and Indentation#indenting-special-forms)
+* [Appendix 1 - Audacity Plug-ins](Audacity_Plug-ins)
