@@ -1,12 +1,12 @@
 # Appendix 1 - Audacity Plug-ins
 
 **Contents**
-* [Introduction](Audacity%20Plug-ins#Introduction)
-* [Supported Return Types](Supported_Return_Types)
-* [Unsupported Return Types](Unsupported_Return_Types)
-* [Plug-in Headers](Plug-in_Headers)
-* [Scripting Commands](Scripting_Commands)
-* [Case Sensitivity](Case_Sensitivity)
+* [Introduction](Audacity_Plug-ins#Introduction)
+* [Supported Return Types](Audacity_Plug-ins#Supported_Return_Types)
+* [Unsupported Return Types](Audacity_Plug-ins#Unsupported_Return_Types)
+* [Plug-in Headers](Audacity_Plug-ins#Plug-in_Headers)
+* [Scripting Commands](Audacity_Plug-ins#Scripting_Commands)
+* [Case Sensitivity](Audacity_Plug-ins#Case_Sensitivity)
 
 
 ## Introduction
