@@ -1,7 +1,7 @@
 # Appendix 1 - Audacity Plug-ins
 
 **Contents**
-* [Introduction](Introduction)
+* [Introduction](Audacity%20Plug-ins#Introduction)
 * [Supported Return Types](Supported_Return_Types)
 * [Unsupported Return Types](Unsupported_Return_Types)
 * [Plug-in Headers](Plug-in_Headers)
